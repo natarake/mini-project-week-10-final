@@ -1,0 +1,278 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/recipeStyles.css" />
+    <script
+      src="https://kit.fontawesome.com/96df58e25b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <title>RECIPE DETAILS</title>
+  </head>
+
+  <body>
+    <div class="flex-container">
+      <!-- --------------------------------Side Bar------------------------- -->
+      <div>
+        <div class="sidebar">
+          <div class="sidebar-top">
+            <a href="recipeMain.html">
+              <img src="assets/img/favicon.png" class="logo" alt="logo" />
+              <h3 class="brand">CODE GRYL</h3>
+            </a>
+          </div>
+          <div class="sidebar-center">
+            <ul class="list">
+              <h4 class="list-title">Healthy Options</h4>
+              <li class="list-item">
+                <a href="recipeMain.html">
+                  <i
+                    class="list-item-icon low-carb fa-solid fa-apple-whole"
+                  ></i>
+                  <span class="list-item-text low-carb" id="low-carb"
+                    >Low-Carb</span
+                  >
+                </a>
+              </li>
+              <li class="list-item">
+                <a href="recipeMain.html">
+                  <i class="list-item-icon keto fa-solid fa-drumstick-bite"></i>
+                  <span class="list-item-text keto" id="keto">Ketogenic</span>
+                </a>
+              </li>
+              <li class="list-item">
+                <a href="recipeMain.html">
+                  <i
+                    class="list-item-icon gluten-free fa-solid fa-wheat-awn"
+                  ></i>
+                  <span class="list-item-text gluten-free" id="gluten-free"
+                    >Gluten-Free</span
+                  >
+                </a>
+              </li>
+              <li class="list-item">
+                <a href="recipeMain.html">
+                  <i class="list-item-icon vegetarian fa-solid fa-leaf"></i>
+                  <span class="list-item-text vegetarian" id="vegetarian"
+                    >Vegetarian</span
+                  >
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="sidebar-center">
+            <ul class="list">
+              <h4 class="list-title">Popular Cuisines</h4>
+              <li class="list-item">
+                <a href="recipeMain.html">
+                  <i class="list-item-icon italian fa-solid fa-pizza-slice"></i>
+                  <span class="list-item-text italian" id="italian"
+                    >Italian</span
+                  >
+                </a>
+              </li>
+              <li class="list-item">
+                <a href="recipeMain.html">
+                  <i class="list-item-icon american fa-solid fa-burger"></i>
+                  <span class="list-item-text american" id="american"
+                    >American</span
+                  >
+                </a>
+              </li>
+              <li class="list-item">
+                <a href="recipeMain.html">
+                  <i class="list-item-icon filipino fa-solid fa-bowl-rice"></i>
+                  <span class="list-item-text filipino" id="filipino"
+                    >Filipino</span
+                  >
+                </a>
+              </li>
+              <li class="list-item">
+                <a href="recipeMain.html">
+                  <i class="list-item-icon asian fi fi-rr-noodles"></i>
+                  <span class="list-item-text asian" id="asian">Asian</span>
+                </a>
+              </li>
+              <li class="list-item">
+                <a href="recipeMain.html">
+                  <i class="list-item-icon mexican fi fi-rr-taco"></i>
+                  <span class="list-item-text mexican" id="mexican"
+                    >Mexican</span
+                  >
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="sidebar-bottom">
+            <div class="color-box dark"></div>
+            <div class="color-box night"></div>
+            <div class="color-box light"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-container">
+        <section class="searchParent">
+          <div class="wrap">
+            <div class="search">
+              <input
+                type="text"
+                class="searchTerm"
+                placeholder="Searching for a specific dish?"
+              />
+              <button type="submit" class="searchButton">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </div>
+        </section>
+        <div class="single-recipe-container">
+          <div class="left-content">
+            <h1 class="single-recipe-title">Content Title</h1>
+            <img
+              src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?cs=srgb&dl=pexels-ella-olsson-1640777.jpg&fm=jpg"
+              alt=""
+              class="single-recipe-image"
+            />
+            <p class="single-recipe-summary">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe
+              consectetur ad cumque nostrum placeat distinctio fugit commodi
+              accusamus autem voluptas vero facere aliquid, voluptate sunt aut
+              quo magnam mollitia esse voluptatem explicabo inventore, cum qui
+              totam quae. A fugiat velit esse pariatur quis, vero, fugit, veniam
+              earum distinctio exercitationem inventore?
+            </p>
+          </div>
+          <div class="right-content">
+            <div class="tabTitles">
+              <p class="tabLinks activeLink" onclick="openTab('instructions')">
+                Instructions
+              </p>
+              <p class="tabLinks" onclick="openTab('ingredients')">
+                Ingredients
+              </p>
+              <p class="tabLinks" onclick="openTab('nutrients')">Nutrients</p>
+            </div>
+            <div class="tabContents activeTab" id="instructions">
+              <p class="single-recipe-instructions">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Perspiciatis aut similique, odio adipisci nobis provident earum
+                ipsam ipsa nemo, dolore asperiores facere? Voluptates error quam
+                eaque placeat. Minus, sed. Voluptatum, corporis iusto.
+                Voluptatum asperiores optio esse ipsum vero culpa dolorem
+                molestiae voluptas cumque sint dolor, officiis expedita earum
+                hic iure.
+              </p>
+            </div>
+            <div class="tabContents" id="ingredients">
+              <ul class="single-recipe-list">
+                <li class="single-recipe-list-items">List of ingredients</li>
+                <li class="single-recipe-list-items">List of ingredients</li>
+                <li class="single-recipe-list-items">List of ingredients</li>
+                <li class="single-recipe-list-items">List of ingredients</li>
+                <li class="single-recipe-list-items">List of ingredients</li>
+                <li class="single-recipe-list-items">List of ingredients</li>
+                <li class="single-recipe-list-items">List of ingredients</li>
+                <li class="single-recipe-list-items">List of ingredients</li>
+              </ul>
+            </div>
+            <div class="tabContents" id="nutrients">
+              <div class="label">
+                <div class="header">
+                  <h1 class="bold">NUTRITION FACTS</h1>
+                  <div class="divider"></div>
+                  <p class="">Can make 8 servings</p>
+                  <p class="bold">
+                    Serving size <span class="right">2/3cup (55g)</span>
+                  </p>
+                </div>
+                <div class="divider lg"></div>
+                <div class="calories-info">
+                  <p class="bold sm-text">Amount per serving</p>
+                  <h1>Calories <span class="right">69</span></h1>
+                </div>
+                <div class="divider md"></div>
+                <div class="daily-value sm-text">
+                  <p class="right bold no-divider">% Daily Value *</p>
+                  <div class="divider"></div>
+                  <p>
+                    <span class="bold">Total Fat</span> 8g
+                    <span class="bold right">10%</span>
+                  </p>
+                  <p>
+                    <span class="indent no-divider">Saturated Fat 1g</span>
+                    <span class="bold right">5%</span>
+                  </p>
+                  <p class="indent no-divider"><i>Trans</i> Fat 0g</p>
+                  <div class="divider"></div>
+                  <p>
+                    <span class="bold">Cholesterol</span> 0mg
+                    <span class="bold right">0%</span>
+                  </p>
+                  <p>
+                    <span class="bold">Sodium </span>160mg
+                    <span class="bold right">7%</span>
+                  </p>
+                  <p>
+                    <span class="bold">Total Carbohydrate</span> 37g
+                    <span class="bold right">13%</span>
+                  </p>
+                  <p class="indent no-divider">Dietary Fiber 4g</p>
+                  <div class="divider"></div>
+                  <p class="indent no-divider">Total Sugars 12g</p>
+                  <div class="divider dbl-indent"></div>
+                  <p class="dbl-indent no-divider">
+                    Includes 10g Added Sugar <span class="bold right">20%</span>
+                  </p>
+                  <div class="divider"></div>
+                  <p class="no-divider"><span class="bold">Protein</span> 3g</p>
+                  <div class="divider lg"></div>
+                  <p>Vitamin D 2mcg <span class="right">10%</span></p>
+                  <p>Calcium 260mg <span class="right">20%</span></p>
+                  <p>Iron 8mg <span class="right">45%</span></p>
+                  <p class="no-divider">
+                    Potassium 235mg <span class="right">6%</span>
+                  </p>
+                </div>
+                <div class="divider md"></div>
+                <p class="note">
+                  * The % Daily Value (DV) tells you how much a nutrient in a
+                  serving of food contributes to a daily diet. 2,000 calories a
+                  day is used for general nutrition advice.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const tablinks = document.getElementsByClassName("tabLinks");
+      const tabcontents = document.getElementsByClassName("tabContents");
+
+      const openTab = (tabname) => {
+        for (tablink of tablinks) {
+          tablink.classList.remove("activeLink");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("activeTab");
+        }
+        event.currentTarget.classList.add("activeLink");
+        document.getElementById(tabname).classList.add("activeTab");
+      };
+    </script>
+  </body>
+</html>
