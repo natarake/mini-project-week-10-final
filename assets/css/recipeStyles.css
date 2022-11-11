@@ -1,0 +1,524 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.sidebar {
+  min-width: 180px;
+  min-height: 100vh;
+  background-color: #111827;
+  color: #9ca3af;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+.sidebar-top,
+.sidebar-center,
+.sidebar-bottom {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  border-bottom: 1px solid #4b4b4b;
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+
+.sidebar-top {
+  justify-content: center;
+}
+
+.sidebar-top > a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-center {
+  padding: 0;
+}
+
+.sidebar-bottom {
+  justify-content: center;
+  border: none;
+}
+
+.logo {
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.brand {
+  font-weight: bold;
+  cursor: pointer;
+  color: hsl(79, 72%, 55%);
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.list-title {
+  color: hsl(79, 72%, 55%);
+  margin-bottom: 10px;
+}
+
+.list-item {
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.list-item > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.list-item-icon {
+  width: 30px;
+  font-size: 20px;
+}
+
+.list-item-icon.fi {
+  margin-right: 10px;
+}
+
+.list-item.active,
+.list-item:hover {
+  background-color: #374151;
+  color: white;
+}
+
+.color-box {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: 1px solid #9ca3af;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.dark {
+  background-color: #111827;
+}
+
+.night {
+  background-color: #312e81;
+}
+
+.light {
+  background-color: #f3f4f6;
+}
+
+.sidebar.night {
+  background-color: #312e81;
+  color: #b4bbc7;
+}
+
+.list-item.night.active {
+  background-color: #4338ca;
+}
+
+.sidebar.light {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+.list-item.light.active {
+  background-color: #d1d5db;
+  color: #111827;
+}
+
+@media only screen and (max-width: 768px) {
+  .sidebar {
+    min-width: 50px;
+  }
+  .brand,
+  .list-item-text {
+    display: none;
+  }
+
+  .list-title {
+    display: none;
+  }
+
+  .sidebar-bottom {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .color-box {
+    margin-right: 0;
+  }
+
+  .logo {
+    margin-right: 0;
+  }
+}
+/* ------------------Content CSS------------------------ */
+.container {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), #364b77);
+  min-height: 100vh;
+  color: white;
+  overflow: hidden;
+}
+
+.featured-content {
+  height: 40vh;
+  padding: 50px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+@media only screen and (max-width: 768px) {
+  .featured-content {
+    display: none;
+  }
+}
+
+/* .featured-title {
+  width: 200px;
+} */
+
+.featured-desc {
+  width: 500px;
+  color: lightgray;
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+
+/* .featured-button {
+  background-color: hsl(79, 72%, 55%);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+} */
+
+.recipe-list-container {
+  padding: 0 20px;
+}
+
+/* .recipe-list-wrapper {
+  position: relative;
+  overflow: hidden;
+} */
+
+.recipe-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  /* height: 240px; */
+  transform: translateX(0);
+  transition: all 1s ease-in-out;
+}
+
+.recipe-list-title {
+  margin-top: 20px;
+}
+
+.recipe-list-item {
+  margin-right: 10px;
+  position: relative;
+  margin: 10px;
+}
+
+.recipe-list-item:hover .recipe-list-item-img {
+  transform: scale(1.2);
+  margin: 0 10px;
+  opacity: 0.5;
+}
+
+.recipe-list-item:hover .recipe-list-item-title,
+.recipe-list-item:hover .recipe-list-item-desc,
+.recipe-list-item:hover .recipe-list-item-button {
+  opacity: 1;
+}
+
+.recipe-list-item-img {
+  transition: all 1s ease-in-out;
+  width: 270px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.recipe-list-item-title {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.3), #364b77);
+  /* background-color: #333; */
+  border-radius: 10px;
+  padding: 0 10px;
+  font-size: 32px;
+  font-weight: bold;
+  position: absolute;
+  top: 10%;
+  left: 20px;
+  opacity: 0;
+  transition: 1s all ease-in-out;
+}
+
+.recipe-list-item-desc {
+  background-color: #333;
+  padding: 10px;
+  font-size: 14px;
+  position: absolute;
+  top: 30%;
+  left: 50px;
+  width: 230px;
+  opacity: 0;
+  transition: 1s all ease-in-out;
+}
+
+.recipe-list-item-button {
+  padding: 10px;
+  background-color: hsl(79, 72%, 55%);
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  opacity: 0;
+  transition: 1s all ease-in-out;
+}
+
+.recipe-list-item-button > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.single-recipe-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.left-content {
+  padding: 30px;
+  flex: 5;
+}
+
+.single-recipe-title {
+  margin-bottom: 20px;
+}
+
+.single-recipe-image {
+  width: 100%;
+  height: 300px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.right-content {
+  flex: 5;
+  padding: 0 30px;
+}
+
+.tabTitles {
+  display: flex;
+}
+.tabLinks {
+  margin-right: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+}
+
+.tabLinks::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: hsl(79, 72%, 55%);
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  transition: 0.5s;
+}
+.tabLinks.activeLink::after {
+  width: 70%;
+}
+
+.tabContents ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tabContents ul li {
+  list-style: inside;
+  padding: 0;
+  margin: 0;
+}
+
+.tabContents {
+  display: none;
+  margin-top: 10px;
+}
+
+.tabContents.activeTab {
+  display: block;
+}
+
+/* -----------------Nutrition Label------------------ CSS */
+.label {
+  font-family: "Open Sans", sans-serif;
+  border: 2px solid black;
+  width: 300px;
+  margin: 20px auto;
+  padding: 0 7px;
+}
+
+.header h1 {
+  text-align: center;
+  margin: -4px 0;
+  letter-spacing: 0.15px;
+}
+
+.divider {
+  border-bottom: 1px solid #888989;
+  margin: 2px 0;
+  clear: right;
+}
+
+.bold {
+  font-weight: 800;
+}
+
+.right {
+  float: right;
+}
+
+.lg {
+  height: 10px;
+}
+
+.lg,
+.md {
+  background-color: black;
+  border: 0;
+}
+
+.md {
+  height: 5px;
+}
+
+.sm-text {
+  font-size: 0.85rem;
+}
+
+.calories-info h1 {
+  margin: -5px -2px;
+  overflow: hidden;
+}
+
+.calories-info span {
+  font-size: 2rem;
+}
+
+.indent {
+  margin-left: 1em;
+}
+
+/* .daily-value p {
+  border-bottom: 1px solid #888989;
+} */
+
+.daily-value p:not(.no-divider) {
+  border-bottom: 1px solid #888989;
+}
+
+.dbl-indent {
+  margin-left: 2em;
+}
+
+.note {
+  font-size: 0.6rem;
+  margin: 5px 0;
+  padding: 0 8px;
+  text-indent: -8px;
+}
+
+/* --------------------------------Searchbar CSS--------------------*/
+.wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.search {
+  width: 60%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid hsl(79, 72%, 55%);
+  border-right: none;
+  padding: 5px;
+  height: 40px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #f6f8f7;
+  background: hsl(180, 12%, 8%);
+}
+
+.searchTerm:focus {
+  color: hsl(79, 72%, 55%);
+}
+
+.searchButton {
+  width: 80px;
+  height: 40px;
+  border: 1px solid hsl(79, 72%, 55%);
+  background: hsl(79, 72%, 55%);
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 15px;
+  font-style: solid;
+}
+
+.bi-search {
+  font-size: 24px;
+  -webkit-text-stroke: 2px;
+}
+
+/* ----------------------Media Queries------------------------- */
+@media (min-width: 1023px) {
+  .single-recipe-container {
+    flex-direction: row;
+  }
+  .right-content {
+    padding-top: 70px;
+  }
+
+  .search {
+    width: 40%;
+    position: relative;
+    display: flex;
+  }
+}

@@ -1,0 +1,141 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/recipeStyles.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.png"
+      type="image/x-icon"
+    />
+    <script
+      src="https://kit.fontawesome.com/96df58e25b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>MEAL PLANNING</title>
+  </head>
+
+  <body>
+    <div class="flex-container">
+      <!-- --------------------------------Side Bar------------------------- -->
+      <div>
+        <div class="sidebar">
+          <div class="sidebar-top">
+            <a href="index.html">
+              <img src="assets/img/favicon.png" class="logo" alt="logo" />
+              <h3 class="brand">CODE GRYL</h3>
+            </a>
+          </div>
+          <div class="sidebar-center">
+            <ul class="list">
+              <h4 class="list-title">Healthy Options</h4>
+              <li class="list-item">
+                <i class="list-item-icon low-carb fa-solid fa-apple-whole"></i>
+                <span class="list-item-text low-carb" id="low-carb"
+                  >Low-Carb</span
+                >
+              </li>
+              <li class="list-item">
+                <i class="list-item-icon keto fa-solid fa-drumstick-bite"></i>
+                <span class="list-item-text keto" id="keto">Ketogenic</span>
+              </li>
+              <li class="list-item">
+                <i class="list-item-icon gluten-free fa-solid fa-wheat-awn"></i>
+                <span class="list-item-text gluten-free" id="gluten-free"
+                  >Gluten-Free</span
+                >
+              </li>
+              <li class="list-item">
+                <i class="list-item-icon vegetarian fa-solid fa-leaf"></i>
+                <span class="list-item-text vegetarian" id="vegetarian"
+                  >Vegetarian</span
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="sidebar-center">
+            <ul class="list">
+              <h4 class="list-title">Popular Cuisines</h4>
+              <li class="list-item">
+                <i class="list-item-icon italian fa-solid fa-pizza-slice"></i>
+                <span class="list-item-text" id="italian">Italian</span>
+              </li>
+              <li class="list-item">
+                <i class="list-item-icon american fa-solid fa-burger"></i>
+                <span class="list-item-text american" id="american"
+                  >American</span
+                >
+              </li>
+              <li class="list-item">
+                <i class="list-item-icon filipino fa-solid fa-bowl-rice"></i>
+                <span class="list-item-text filipino" id="filipino"
+                  >Filipino</span
+                >
+              </li>
+              <li class="list-item">
+                <i class="list-item-icon asian fi fi-rr-noodles"></i>
+                <span class="list-item-text asian" id="asian">Asian</span>
+              </li>
+              <li class="list-item">
+                <i class="list-item-icon mexican fi fi-rr-taco"></i>
+                <span class="list-item-text mexican" id="mexican">French</span>
+              </li>
+            </ul>
+          </div>
+          <div class="sidebar-bottom">
+            <div class="color-box dark"></div>
+            <div class="color-box night"></div>
+            <div class="color-box light"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ------------------------------Content------------------------ -->
+
+      <div class="container">
+        <div class="content-container">
+          <div
+            class="featured-content"
+            style="
+              background: linear-gradient(
+                  rgba(0, 0, 0, 0.5),
+                  rgba(53, 75, 119, 0.3)
+                ),
+                url('https://thumbs.dreamstime.com/b/healthy-food-selection-healthy-food-selection-fruits-vegetables-seeds-superfood-cereals-gray-background-121936825.jpg');
+            "
+          >
+            <p class="featured-desc">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto
+              illo dolor deserunt nam assumenda ipsa eligendi dolore, ipsum id
+              fugiat quo enim impedit, laboriosam omnis minima voluptatibus
+              incidunt. Accusamus, provident.
+            </p>
+          </div>
+          <div class="recipe-list-container">
+            <h1 class="recipe-list-title">OUR TOP PICKS FOR THIS SELECTION</h1>
+            <div class="recipe-list-wrapper">
+              <div class="recipe-list"></div>
+              <!-- <button class="pre-btn">
+                <img src="arrow.png" alt="" />
+              </button>
+              <button class="nxt-btn">
+                <img src="arrow.png" alt="" />
+              </button> -->
+              <!-- <i class="fas fa-chevron-right arrow next-button"></i> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/api.js"></script>
+  </body>
+</html>
