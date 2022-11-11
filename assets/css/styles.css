@@ -1264,3 +1264,11 @@ img {
   text-decoration: none;
   cursor: pointer;
 }
+
+.margin {
+  margin-top: 5px;
+}
+
+.highlight {
+  color: var(--first-color);
+}
