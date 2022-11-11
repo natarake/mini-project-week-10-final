@@ -1272,3 +1272,9 @@ img {
 .highlight {
   color: var(--first-color);
 }
+
+@media only screen and (min-width: 1500px) {
+  .xl__layout {
+    margin-left: 200px;
+  }
+}
