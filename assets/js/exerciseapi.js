@@ -10,7 +10,7 @@ const renderBodyParts = (exerciseList = []) => {
         <div class="card-body">
             <span class="tag tag-teal">${bodyPart.muscle} Workouts</span>
             <h3 class="margin">${bodyPart.name.toUpperCase()}</h3>
-              <h6>EXERCISE TYPE: <span class="highlight">${bodyPart.type.toUpperCase()}</span></h6>
+            <h6>EXERCISE TYPE: <span class="highlight">${bodyPart.type.toUpperCase()}</span></h6>
             <h6>EQUIPMENT: <span class="highlight">${bodyPart.equipment.toUpperCase()}</span></h6>
             <h6>DIFFICULTY: <span class="highlight">${bodyPart.difficulty.toUpperCase()}</span></h6>
             <p class="margin">${bodyPart.instructions}</p>
