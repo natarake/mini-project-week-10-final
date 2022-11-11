@@ -41,6 +41,7 @@ const loadBodyParts = async (exercise) => {
     const api = await fetch(url + `${exercise}`, options);
     const data = await api.json();
     localStorage.setItem(`${exercise}`, JSON.stringify(data));
+    renderBodyParts(data);
     console.log(data);
   }
 };
