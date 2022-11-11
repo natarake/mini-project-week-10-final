@@ -1,6 +1,6 @@
 // Global constants
-const appId = "e5fa2517";
-const appKey = "cc079f4692e1f13d511364889c6b37d3";
+const appId = "c7309cba";
+const appKey = "a9869eae265be8592495b0f93860bf70";
 const apiKey = "002ea223eb0e46a88b081ddda039cf0e";
 const baseUrl = `https://api.edamam.com/api/recipes/v2?type=public&app_id=${appId}&app_key=${appKey}`;
 const baseUrl2 = `https://api.spoonacular.com/recipes/random?apiKey=${apiKey}&number=1`;
