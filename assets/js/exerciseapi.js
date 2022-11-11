@@ -104,3 +104,56 @@ const scrollHeader = () => {
     : header.classList.remove("bg-header");
 };
 window.addEventListener("scroll", scrollHeader);
+
+// /*=============== EMAIL JS ===============*/
+
+const contactForm = document.getElementById("contact-form");
+const contactMessage = document.getElementById("contact-message");
+const contactUser = document.getElementById("contact-user");
+
+const sendEmail = (e) => {
+  e.preventDefault();
+
+  // Check if the field has a value
+  if (contactUser.value === "") {
+    // Add and remove color
+    contactMessage.classList.remove("color-green");
+    contactMessage.classList.add("color-red");
+    // Show message
+    contactMessage.textContent = "You must enter your email! 😉";
+    // Remove message after 3 seconds
+    setTimeout(() => {
+      contactMessage.textContent = "";
+    }, 3000);
+  } else {
+    // serviceID - templateID - #form - publicKey
+    emailjs
+      .sendForm(
+        "service_rc7hvxb",
+        "template_fqu8v5a",
+        "#contact-form",
+        "OZTEDsrpuYLfu2Uq9"
+      )
+      .then(
+        () => {
+          // Show message and add color
+          contactMessage.classList.add("color-green");
+          contactMessage.textContent = "You registered successfully! 💪";
+
+          // Remove message after 3 seconds
+          setTimeout(() => {
+            contactMessage.textContent = "";
+          }, 3000);
+        },
+        (error) => {
+          // Mail sending error
+          alert("OOPS! SOMETHING HAS FAILED...", error);
+        }
+      );
+    // To clear the input field
+    contactUser.value = "";
+  }
+};
+
+contactForm.addEventListener("submit", sendEmail);
+
